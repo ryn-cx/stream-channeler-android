@@ -1,0 +1,12 @@
+<!-- TODO: Validate -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagIncludeNotImportantViews|flagRetrieveInteractiveWindows"
+    android:canPerformGestures="true"
+    android:canRequestFilterKeyEvents="true"
+    android:canRetrieveWindowContent="true"
+    android:canTakeScreenshot="true"
+    android:description="@string/profile_picker_description"
+    android:notificationTimeout="250"
+    android:packageNames="com.amazon.amazonvideo.livingroom,com.cbs.ott,com.crunchyroll.crunchyroid,com.disney.disneyplus,com.hulu.livingroomplus,com.netflix.ninja,com.peacocktv.peacockandroid,com.twentyfouri.androidtv.hidive,com.wbd.stream,jp.or.nhk.nhkworld.tv,tv.pluto.android" />

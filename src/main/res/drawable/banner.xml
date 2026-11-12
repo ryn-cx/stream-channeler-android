@@ -1,0 +1,16 @@
+<!-- TODO: Validate -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="320dp"
+                android:height="180dp" />
+            <solid android:color="@color/background" />
+        </shape>
+    </item>
+    <item
+        android:width="125dp"
+        android:height="128dp"
+        android:drawable="@drawable/logo"
+        android:gravity="center" />
+</layer-list>

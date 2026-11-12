@@ -1,0 +1,7 @@
+<!-- TODO: Validate -->
+<resources>
+    <string name="app_name">Stream Channeler</string>
+    <string name="playback_watcher_label">Stream Channeler video end detection</string>
+    <string name="profile_picker_label">Stream Channeler profile picker</string>
+    <string name="profile_picker_description">Picks your chosen profile, and enters its PIN, when a streaming app opened from the Stream Channeler guide asks who is watching. Also presses skip buttons and cancels the streaming app\'s own next episode autoplay, which can involve taking screenshots of the streaming app to find them.</string>
+</resources>

@@ -1,0 +1,7 @@
+<!-- TODO: Validate -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/logo"
+    android:insetLeft="24.07%"
+    android:insetRight="24.07%"
+    android:insetTop="23.38%"
+    android:insetBottom="23.38%" />

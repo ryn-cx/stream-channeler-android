@@ -1,0 +1,9 @@
+<!-- TODO: Validate -->
+<resources>
+    <style name="Theme.StreamChanneler" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

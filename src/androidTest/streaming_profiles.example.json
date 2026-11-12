@@ -1,0 +1,14 @@
+{
+	"plugin_key_to_profile": {
+		"Disney+": {
+			"profile_name": "Name",
+			"profile_number": null,
+			"pin": "1234"
+		},
+		"Netflix": {
+			"profile_name": null,
+			"profile_number": 1,
+			"pin": "1234"
+		}
+	}
+}

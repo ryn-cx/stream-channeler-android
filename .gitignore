@@ -1,0 +1,12 @@
+# TODO: Validate
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+src/androidTest/assets/streaming_app_test_secrets.properties
+src/androidTest/assets/streaming_profiles.json
+docs/
+tools_private/
+tools/dumps/
