@@ -5,7 +5,7 @@ The Stream Channeler app for Android TV, Google TV and Fire TV. It automatically
 [Stream Channeler](https://streamchanneler.com/) channels like a real TV channel by opening each video in the streaming
 app that hosts it. Channels are created and edited on [Stream Channeler's website](https://streamchanneler.com/).
 
-![The Stream Channeler guide](docs/guide.png)
+![The Stream Channeler guide](README/guide.png)
 
 ## Features
 
