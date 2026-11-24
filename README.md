@@ -20,7 +20,7 @@ app that hosts it. Channels are created and edited on [Stream Channeler's websit
 1. Download and install the APK:
    1. Install a downloader app from the TV's app store.
    2. Allow it to install apps: when it asks, or under **Settings > Apps > Security & restrictions > Unknown sources** (on Fire TV, **Settings > My Fire TV > Developer options > Install unknown apps**).
-   3. In the downloader, enter the link to `stream-channeler-release.apk` from the latest [release](../../releases/latest), then install it when the download finishes.
+   3. In the downloader, enter the link to [stream-channeler-release.apk from the latest release](https://github.com/ryn-cx/stream-channeler-android/releases/latest/download/stream-channeler-release.apk), then install it when the download finishes.
 2. Open the app and sign in with a code or your Stream Channeler email and password, or choose **Continue without signing in** to browse public channels only.
 3. Open **Settings** (Menu button) and turn on each permission under **Permissions**. Selecting a button opens the device's settings screen for it:
    - **Detect when videos end (notification access)**: lets the app tell when a video in a streaming app ends.
