@@ -1,20 +1,19 @@
 # TODO: Validate
-name: Release
+# Publishing a GitHub release builds the signed release APK and attaches it to that release. The APK's version name is
+# the release tag without its leading "v".
+name: deploy
 
 on:
-  push:
-    tags:
-      - "v*"
-
-permissions:
-  contents: write
+  release:
+    types: [published]
 
 jobs:
-  build-release-apk:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up the JDK
         uses: actions/setup-java@v4
@@ -43,16 +42,16 @@ jobs:
 
       - name: Build the release APK
         env:
-          VERSION_NAME: ${{ github.ref_name }}
+          RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew testDebugUnitTest assembleRelease -PversionName="${VERSION_NAME#v}" -PversionCode="${{ github.run_number }}"
+          ./gradlew testDebugUnitTest assembleRelease -PversionName="${RELEASE_TAG_NAME#v}" -PversionCode="${{ github.run_number }}"
 
-      - name: Publish the GitHub release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: build/outputs/apk/release/*.apk
-          generate_release_notes: true
+      - name: Upload the APK to the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG_NAME" build/outputs/apk/release/*.apk --clobber
